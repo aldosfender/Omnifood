@@ -23,6 +23,15 @@ html {
     text-rendering: optimizeLegibility; /* fonts rendering in a perfect way */ 
 }
 
+.clearfix {zoom: 1}
+.clearfix::after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 /* -------------------------------------------------- */
 /* Reusable Components */ 
 /* -------------------------------------------------- */
@@ -222,7 +231,7 @@ header {
     width: 100%;
     margin: 0;
     overflow: hidden; /* it makes the image float over its contaier */
-    background-color: #4682b4;
+    background-color: #000000;
 }
 
 .meals-showcase li figure img {
@@ -237,3 +246,63 @@ header {
     opacity: 1; /* 100% */
     transform: scale(1.03);
 }
+
+/* -------------------------------------------------- */
+/* How it works Section */ 
+/* -------------------------------------------------- */
+
+.section-steps {
+    background-color: #f4f4f4
+}
+
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px; 
+}
+
+.steps-box:last-child {
+    padding-left: 3px;
+    margin-top: 80px;
+}
+
+.app-screen {
+    width: 50%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+.works-step div {
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block; /* the width is the same as the element inside it */
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
