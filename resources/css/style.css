@@ -11,16 +11,18 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-html {
+html, body {
     background-color: #fff;
     color: #555; /* gray color */
     font-family: 'Lato', 'Arial', sans-serif; /* In case no internet conection */     
     font-weight: 300; /* 300 is the default value from google font */ 
     font-size: 20px;
     text-rendering: optimizeLegibility; /* fonts rendering in a perfect way */ 
+    overflow-x: hidden; /* fix the problem with with white space in the right side at movil version */
 }
 
 .clearfix {zoom: 1}
@@ -136,6 +138,7 @@ h3 {
     font-weight: 300;
     text-decoration: none;
     border-radius: 20px;
+    -webkit-transition: background-color 0.3s, border 0.3s, color 0.3s;
     transition: background-color 0.3s, border 0.3s, color 0.3s;
 }
 
@@ -169,6 +172,7 @@ h3 {
 /* -------------------------------------------------- */
 
 header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/hero.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg); 
     background-size: cover;
     background-position: center;
@@ -181,6 +185,7 @@ header {
     width: 1140px;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); /* translate the element half of its width and height up and left */
 }
 
@@ -209,6 +214,7 @@ header {
     padding-bottom: 5px;
     word-spacing: 1px;
     border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.3s;
     transition: border-bottom 0.3s;
 }
 
@@ -253,12 +259,17 @@ header {
     opacity: 0.75; /* 75% */
     width: 100%; /* this adjust the photo to its container */
     height: auto;
+    -webkit-transform: scale(1.15);
     transform: scale(1.15); /* it need the help of the overflow property by its parent container */
+    -webkit-transition: opacity 0.75s, -webkit-transform 0.5s;
+    transition: opacity 0.75s, -webkit-transform 0.5s;
     transition: transform 0.5s, opacity 0.75s;
+    transition: transform 0.5s, opacity 0.75s, -webkit-transform 0.5s;
 }
 
 .meals-showcase li figure img:hover {
     opacity: 1; /* 100% */
+    -webkit-transform: scale(1.03);
     transform: scale(1.03);
 }
 
@@ -331,6 +342,7 @@ header {
     color: #e67e22;
     text-decoration: none;
     border-bottom: 1px solid #e67e22;
+    -webkit-transition: border-bottom 0.5s, color 0.5s;
     transition: border-bottom 0.5s, color 0.5s;
 }
 
@@ -344,6 +356,7 @@ header {
 /* -------------------------------------------------- */
 
 .section-testimonials {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(img/back-customers.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
     background-size: cover;
     color: #c9c9c9;
@@ -393,6 +406,7 @@ header {
     border-radius: 5px;
     width: 90%;
     margin-left: 5%; /* it center the plan-box text from its parent - col 1 of 3 */
+    -webkit-box-shadow: 0 2px 2px #efefef;
     box-shadow: 0 2px 2px #efefef; /* it gives box shadow to the entire card / x,y,blur,color */
 }
 
@@ -500,6 +514,7 @@ footer {
     text-decoration: none;
     border: 0;
     color: #888;
+    -webkit-transition: color 0.2s;
     transition: color 0.2s; 
 }
 
@@ -515,6 +530,7 @@ footer {
 .ion-social-twitter, 
 .ion-social-googleplus, 
 .ion-social-instragram  {
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
