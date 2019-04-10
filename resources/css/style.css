@@ -195,6 +195,17 @@ header {
     float: left;
     margin-top: 20px;
 }
+
+.logo-black { 
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+    display: none;
+}
+
+/***** Normal Nav *****/
+
 .main-nav {
     float: right;
     list-style: none; /* it skip the item points */
@@ -221,6 +232,45 @@ header {
 .main-nav li a:hover, .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
 }
+
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+
+/***** Sticky Nav *****/
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(252, 252, 252);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 1;
+}
+
+.sticky .main-nav {
+    margin-top: 15px;
+}
+
+.sticky .main-nav li a:link, .sticky .main-nav li a:visited {
+    color: #555;
+    padding: 16px 0;
+}
+
+.sticky .logo { display: none; }
+.sticky .logo-black { display: block; }
+
+
 /* -------------------------------------------------- */
 /* Feature Section */ 
 /* -------------------------------------------------- */
@@ -557,3 +607,28 @@ footer p {
 }
 
 
+
+
+
+/* -------------------------------------------------- */
+/* Animations */ 
+/* -------------------------------------------------- */
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-4 {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
+}
